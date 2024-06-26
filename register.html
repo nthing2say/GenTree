@@ -29,9 +29,14 @@
                 <h1 class="title">Gen Tree</h1>
                 <form class="formulario">
                     <h2>Datos de Usuario:</h2>
-                    <input type="text" placeholder="Wallet" required>
-                    <input type="text" placeholder="Full Name" required>
-                    <input type="email" placeholder="Email" required><br><br><br>
+                    <label for="wallet">Wallet</label>
+                    <label for="name" style="margin-left:7.6em ;">Full Name</label>
+                    <label for="email" style="margin-left:5.4em ;">Email</label><br>
+                        <input type="text" placeholder="Wallet" name="wallet" required>
+                        <input type="text" placeholder="Full Name" name="name" required>
+                        <input type="email" placeholder="Email" name="email" required>
+                    
+                    <br><br><br>
                     <button type="submit">Enviar</button>
                 </form>
             </div>
