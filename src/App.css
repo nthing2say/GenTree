@@ -82,7 +82,7 @@
       right: 10%;
       width: 150%;
       height: 150%;
-      background: url('../public/gentree2.png') no-repeat right;
+      background: url('../src/assets/gentree2.png') no-repeat right;
       background-size: contain;
   }
   
