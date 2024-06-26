@@ -1,9 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx' 
-
+import { ThirdwebProvider } from 'thirdweb/react'
+import { base } from "thirdweb/chains";
+ 
+const myChain = base;
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <ThirdwebProvider ><App /></ThirdwebProvider>
   </React.StrictMode>,
 )
