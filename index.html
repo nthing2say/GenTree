@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen Tree</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo_gentree1.png" alt="Logo" class="logo">
+        <nav>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="content">
+                <h1 class="title">Gen Tree</h1>
+                <p class="slogan">Preserva tu Historia,<br> Asegura tu Futuro</p>
+                <button class="register-button" onclick="openModal()">Regístrate Gratis</button>
+            </div>
+            <div class="content2"></div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="walletModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Conecta tu Wallet</h2>
+            <button onclick="connectWallet('metamask')">Conectar con MetaMask</button>
+            <button onclick="connectWallet('coinbase')">Conectar con Coinbase</button>
+            <button onclick="connectWallet('other')">Conectar con otra Wallet</button>
+            <br><br>
+            <button onclick="location.href='https://www.coinbase.com/wallet'">No tengo una Wallet</button>
+        </div>
+    </div>
+  <footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>Sobre Gen Tree</h3>
+            <p>Gen Tree es una plataforma dedicada a preservar la historia familiar y asegurar el futuro de tus descendientes. Únete a nosotros y empieza a crear tu árbol genealógico hoy mismo.</p>
+        </div>
+        <div class="footer-section links">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contacto</h3>
+            <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+            <p><i class="fas fa-envelope"></i> info@gentree.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Gen Tree. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+
+    <script>
+        function openModal() {
+            document.getElementById('walletModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('walletModal').style.display = 'none';
+        }
+
+        function connectWallet(walletType) {
+            alert('Conectar con ' + walletType);
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('walletModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
