@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Register = () => {
     const [inputs, setInputs] = useState({
-        wallet: "",
+        username: "",
         name: "",
         email: ""
     });
@@ -16,14 +16,14 @@ const Register = () => {
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
      
-        const wallet = inputs.wallet.trim()
+        const username = inputs.username.trim()
         const name = inputs.name.trim()
         const email = inputs.email.trim()
-        if (wallet && email && name) {
+        if (username && email && name) {
           fetch("endpoint a recibir", {
             method: "POST",
             body: JSON.stringify({
-              wallet,
+              username,
               name,
               email,
             }),
@@ -34,7 +34,6 @@ const Register = () => {
             .then(response => response.json())
             .then(data => {
                 return setInputs(data);
-              
             })
         }
       }
@@ -44,12 +43,12 @@ const Register = () => {
                 <div className="content">
                     <h1 className="title">Gen Tree</h1>
                     <form onSubmit={handleSubmit} className="formulario">
-                        <label htmlFor="wallet">Wallet: </label>
+                        <label htmlFor="username">Nombre de Usuario: </label>
                         <input
-                            id="wallet"
+                            id="username"
                             type="text"
-                            name="wallet"
-                            value={inputs.wallet || ""}
+                            name="username"
+                            value={inputs.username || ""}
                             onChange={handleChange}
                             placeholder="Wallet"
                             required
