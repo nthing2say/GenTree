@@ -1,8 +1,9 @@
 import Logo from './../assets/logo_gentree1.png';
+import { Link } from 'react-router-dom';
 const Header = ()=>{
     return(
         <header>
-        <img src= {Logo} alt="Logo" className="logo" />
+          <Link to="/"> <img src= {Logo} alt="Logo" className="logo" /></Link>  
         <nav>
             <ul id="nav-links" className="nav-links">
                 <li><a href="#about">About</a></li>

@@ -1,18 +1,28 @@
  import { ConnectButton, ConnectButton_connectButtonOptions } from "thirdweb/react";
 import { client,myChain } from "./../lib/thirdwebClient";
-type connectButton = ConnectButton_connectButtonOptions;
+import { useNavigate } from "react-router-dom";
+type connectButton = ConnectButton_connectButtonOptions; 
 const Home = () => {
+    const navigate = useNavigate()
+    const handleRedirect=()=>{
+       return navigate("/register") 
+    }
+    const handleRedirectHome = ()=>{
+        return navigate("/") 
+    }
     return (
         <main>
             <section className="hero">
                 <div className="content">
                     <h1 className="title">Gen Tree</h1>
                     <p className="slogan">Preserva tu Historia,<br /> Asegura tu Futuro</p>
+                    <button   onClick={handleRedirect}>
                      <ConnectButton
+                     onDisconnect={handleRedirectHome}
                      connectButton={{ 
                           label: "Regístrate Gratis",
                           className: "register-button",  
-                      }}
+                      }} 
                     client={client}
                     chain={myChain}
                     appMetadata={{
@@ -20,6 +30,7 @@ const Home = () => {
                         url: "https://example.com",
                     }}
                 />
+                </button>
                 </div>
                 <div className="content2"></div>
             </section>

@@ -1,17 +1,58 @@
+import { useState } from "react";
+
 const Register = () => {
+    const [inputs, setInputs] = useState({
+        wallet: "",
+        name: "",
+        email: ""
+    });
+
+    const handleChange = (event: { target: { name: any; value: any; }; }) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({ ...values, [name]: value }))
+    }
+
+    const handleSubmit = (event: { preventDefault: () => void; }) => {
+        event.preventDefault();
+        alert(inputs);
+    }
+
     return (
         <main>
             <section className="hero">
                 <div className="content">
                     <h1 className="title">Gen Tree</h1>
-                    <form className="formulario">
-                        <h2>Datos de Usuario:</h2>
-                        <label htmlFor="wallet">Wallet</label>
-                        <label htmlFor="name" style={{ marginLeft: "7.6em" }}>Full Name</label>
-                        <label htmlFor="email" style={{ marginLeft: "4.5em" }}>Email</label><br></br>
-                        <input type="text" placeholder="Wallet" required />
-                        <input type="text" placeholder="Full Name" required />
-                        <input type="email" placeholder="Email" required /><br /><br /><br />
+                    <form onSubmit={handleSubmit} className="formulario">
+                        <label htmlFor="wallet">Wallet: </label>
+                        <input
+                            id="wallet"
+                            type="text"
+                            name="wallet"
+                            value={inputs.wallet || ""}
+                            onChange={handleChange}
+                            placeholder="Wallet"
+                            required
+                        />
+
+                        <label htmlFor="name">Full Name: </label>
+                        <input
+                            id="name"
+                            type="text"
+                            name="name"
+                            value={inputs.name || ""}
+                            onChange={handleChange}
+                            placeholder="Full Name" required 
+                        />
+
+                        <label htmlFor="email">Email:</label>
+                            <input
+                                type="email"
+                                name="email"
+                                value={inputs.email || ""}
+                                onChange={handleChange}
+                                placeholder="Email" required 
+                            />
                         <button type="submit">Enviar</button>
                     </form>
                 </div>

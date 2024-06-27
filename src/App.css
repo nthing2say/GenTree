@@ -12,7 +12,13 @@
     font-family: 'Roboto Slab', serif;
     font-weight: 700;
   }
-  
+  .formulario{
+    display: flex;
+    flex-direction: column;
+  }
+  .formulario input{
+    margin-bottom: 20px;
+  }
   /* Estilos de fuente para citas y detalles personales */
   .quote, .personal-details {
     font-family: 'Pacifico', cursive;
