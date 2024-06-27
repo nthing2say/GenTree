@@ -15,9 +15,29 @@ const Register = () => {
 
     const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
-        alert(inputs);
-    }
-
+     
+        const wallet = inputs.wallet.trim()
+        const name = inputs.name.trim()
+        const email = inputs.email.trim()
+        if (wallet && email && name) {
+          fetch("endpoint a recibir", {
+            method: "POST",
+            body: JSON.stringify({
+              wallet,
+              name,
+              email,
+            }),
+            headers: {
+              "Content-type": "application/json; charset=UTF-8",
+            },
+          })
+            .then(response => response.json())
+            .then(data => {
+                return setInputs(data);
+              
+            })
+        }
+      }
     return (
         <main>
             <section className="hero">
