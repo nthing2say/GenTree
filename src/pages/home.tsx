@@ -10,9 +10,9 @@ import { createWallet } from "thirdweb/wallets";
     ];
 
     const navigate = useNavigate()
-    const handleRedirect=()=>{
-       return navigate("/register") 
-    }
+  //  const handleRedirect=()=>{
+  //     return navigate("/register") 
+   // }
     const handleRedirectHome = ()=>{
         return navigate("/") 
     }
