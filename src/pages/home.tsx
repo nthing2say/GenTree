@@ -1,8 +1,7 @@
- import { ConnectButton, ConnectButton_connectButtonOptions } from "thirdweb/react";
+ import { ConnectButton} from "thirdweb/react";
 import { client,myChain } from "./../lib/thirdwebClient";
 import { useNavigate } from "react-router-dom";
-type connectButton = ConnectButton_connectButtonOptions; 
-const Home = () => {
+ const Home = () => {
     const navigate = useNavigate()
     const handleRedirect=()=>{
        return navigate("/register") 
