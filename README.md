@@ -60,9 +60,9 @@ REACT_APP_THIRDWEB_API_KEY=tu-api-key
 ```
 ### Base
 Configura la red Base en tu proyecto de Thirdweb:
-```import { ChainId } from '@thirdweb-dev/sdk';
+```import { ChainId } from '@thirdweb-dev/sdk';```
 
-```const activeChainId = ChainId.Base;
+```const activeChainId = ChainId.Base;```
 ### Fleek
 Para desplegar en Fleek, sigue los pasos de la documentación oficial de Fleek para conectar tu repositorio y configurar el despliegue continuo.
 
