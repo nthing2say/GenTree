@@ -6,7 +6,7 @@ const Register = () => {
         name: "",
         email: ""
     });
-
+const [message, setMessage] = useState("")
     const handleChange = (event: { target: { name: any; value: any; }; }) => {
         const name = event.target.name;
         const value = event.target.value;
@@ -20,7 +20,7 @@ const Register = () => {
         const name = inputs.name.trim()
         const email = inputs.email.trim()
         if (username && email && name) {
-          fetch("endpoint a recibir", {
+          fetch("https://r2yj9u8c1e.execute-api.us-east-1.amazonaws.com/user", {
             method: "POST",
             body: JSON.stringify({
               username,
@@ -33,9 +33,16 @@ const Register = () => {
           })
             .then(response => response.json())
             .then(data => {
+                
                 return setInputs(data);
             })
         }
+        setInputs({
+            username: "",
+            name: "",
+            email: ""
+        });
+        setMessage("Mensaje enviado con éxito")
       }
     return (
         <main>
@@ -50,7 +57,7 @@ const Register = () => {
                             name="username"
                             value={inputs.username || ""}
                             onChange={handleChange}
-                            placeholder="Wallet"
+                            placeholder="Usuario"
                             required
                         />
 
@@ -74,6 +81,7 @@ const Register = () => {
                             />
                         <button type="submit">Enviar</button>
                     </form>
+                    <p>{message}</p>
                 </div>
                 <div className="content2"></div>
             </section>
