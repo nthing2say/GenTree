@@ -12,6 +12,7 @@ Este proyecto es una aplicación descentralizada (dApp) desarrollada con React, 
 - [Dependencias](#dependencias)
 - [Configuración](#configuración)
 - [Contribuidores](#contribuidores)
+- [Pitch](#Pitch)
 - [Licencia](#licencia)
 
 ## Instalación
@@ -73,9 +74,9 @@ Para desplegar en Fleek, sigue los pasos de la documentación oficial de Fleek p
 [nthing2say](https://github.com/nthing2say)
 [cwjasmin](https://github.com/cwjasmin)
 
-## Licencia
-Este proyecto está licenciado bajo la Licencia MIT.
-
 ## Pitch
 [Spanish](https://drive.google.com/file/d/1mWikWJ7Km97kIN0rRw8P-JbaWQ3eMGpg/view)
 [English](https://drive.google.com/file/d/1rrGcHLpRq8vontx0FM_iPSKY7jAva0aS/view?usp=drive_link)
+
+## Licencia
+Este proyecto está licenciado bajo la Licencia MIT.
