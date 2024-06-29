@@ -57,7 +57,7 @@ Este proyecto es una aplicación descentralizada (dApp) desarrollada con React, 
 Asegúrate de configurar tus credenciales de Thirdweb en un archivo `.env`:
 ```env
 REACT_APP_THIRDWEB_API_KEY=tu-api-key
-
+```
 ### Base
 Configura la red Base en tu proyecto de Thirdweb:
 ```import { ChainId } from '@thirdweb-dev/sdk';
@@ -68,6 +68,10 @@ Para desplegar en Fleek, sigue los pasos de la documentación oficial de Fleek p
 
 ## Contribuidores
 
+[gabimancinir](https://github.com/gabimancini)
+[jtrmTrading](https://github.com/jtrmTrading)
+[nthing2say](https://github.com/nthing2say)
+[cwjasmin](https://github.com/cwjasmin)
 
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT.
