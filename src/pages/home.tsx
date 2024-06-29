@@ -10,9 +10,9 @@ const Home = () => {
     ];
 
     const navigate = useNavigate()
-    const handleRedirect = () => {
-        return navigate("/register")
-    }
+//    const handleRedirect = () => {
+     //   return navigate("/register")
+  //  }
     const handleRedirectHome = () => {
         return navigate("/")
     }
@@ -26,7 +26,7 @@ const Home = () => {
                     <ConnectButton
                         wallets={wallets}
                         onDisconnect={handleRedirectHome}
-                        onConnect={handleRedirect}
+                       // onConnect={handleRedirect}
                         connectButton={{
                             label: "Regístrate Gratis",
                             className: "register-button",
