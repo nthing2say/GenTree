@@ -11,9 +11,6 @@ Este proyecto es una aplicación descentralizada (dApp) desarrollada con React, 
 - [Características](#características)
 - [Dependencias](#dependencias)
 - [Configuración](#configuración)
-- [Documentación](#documentación)
-- [Ejemplos](#ejemplos)
-- [Solución de Problemas](#solución-de-problemas)
 - [Contribuidores](#contribuidores)
 - [Licencia](#licencia)
 
