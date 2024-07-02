@@ -78,5 +78,8 @@ Para desplegar en Fleek, sigue los pasos de la documentación oficial de Fleek p
 [Spanish](https://drive.google.com/file/d/1mWikWJ7Km97kIN0rRw8P-JbaWQ3eMGpg/view)
 [English](https://drive.google.com/file/d/1rrGcHLpRq8vontx0FM_iPSKY7jAva0aS/view?usp=drive_link)
 
+## Brief
+[Know more](https://drive.google.com/file/d/1rrGcHLpRq8vontx0FM_iPSKY7jAva0aS/view)
+
 ## Licencia
 Este proyecto está licenciado bajo la Licencia MIT.
